@@ -42,7 +42,7 @@ void* lookup_symbol(char* libraryname,char* symbolname)
 MSInitialize {
   
     cigi_hook((void *)arc4random,(void*)&replaced_arc4random,(void**)&original_arc4random);
-    void * getAgeSym = lookup_symbol("/data/data/io.koz.targetApp2/lib/libtargetLib.so","getAge");
+    void * getAgeSym = lookup_symbol("/data/data/io.koz.targetApp1/lib/libtargetLib.so","getAge");
     cigi_hook(getAgeSym,(void*)&replaced_getAge,(void**)&original_getAge);
 
 }
